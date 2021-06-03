@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin1x">8dp</dimen>
+    <dimen name="margin3x">24dp</dimen>
+    <dimen name="margin2x">16dp</dimen>
+    <dimen name="txtsize">14sp</dimen>
+    <dimen name="txtSizeStory">10sp</dimen>
+</resources>

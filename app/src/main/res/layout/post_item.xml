@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/margin1x">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/lightblack"
+        android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/profile_img"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="@dimen/margin1x"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+       />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin1x"
+            android:text="@string/name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txtsize"
+            app:layout_constraintBottom_toBottomOf="@id/profile_img"
+            app:layout_constraintStart_toEndOf="@id/profile_img"
+            app:layout_constraintTop_toTopOf="@id/profile_img"
+
+            />
+
+        <TextView
+            android:id="@+id/caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hhjjjjjjjjjj"
+            android:textColor="@color/white"
+
+            android:textSize="@dimen/txtsize"
+            app:layout_constraintStart_toStartOf="@+id/like"
+            app:layout_constraintTop_toBottomOf="@+id/like" />
+        <ImageView
+            android:id="@+id/post_img"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_margin="@dimen/margin2x"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_img" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin1x"
+            android:src="@drawable/ic_save"
+            app:layout_constraintEnd_toEndOf="@id/post_img"
+            app:layout_constraintTop_toBottomOf="@id/post_img" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin1x"
+            android:src="@drawable/ic_heart"
+            app:layout_constraintStart_toStartOf="@id/post_img"
+            app:layout_constraintTop_toBottomOf="@id/post_img" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin1x"
+
+            android:src="@drawable/ic_message_circle"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@id/post_img" />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="25dp"
+            android:layout_margin="@dimen/margin1x"
+            android:src="@drawable/ic_share__1_"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@id/post_img" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin2x"
+            android:src="@drawable/ic_more_ver"
+            app:layout_constraintBottom_toBottomOf="@+id/profile_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/profile_img" />
+
+        <TextView
+            android:id="@+id/like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin1x"
+            android:text="308 Likes"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txtsize"
+            app:layout_constraintStart_toStartOf="@id/post_img"
+            app:layout_constraintTop_toBottomOf="@id/imageView" />
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2019-11-12 00:46:19 .see Translation"
+            android:layout_margin="@dimen/margin1x"
+            android:textSize="10sp"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/caption"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/post_img"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
