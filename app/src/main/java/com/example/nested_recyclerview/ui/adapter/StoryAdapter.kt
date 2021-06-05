@@ -1,4 +1,4 @@
-package com.example.nested_recyclerview.ui
+package com.example.nested_recyclerview.ui.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -9,7 +9,6 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.nested_recyclerview.R
 import com.example.nested_recyclerview.data.Post
-import com.example.nested_recyclerview.databinding.HeaderBinding
 import com.example.nested_recyclerview.databinding.StoryItemBinding
 
 class StoryAdapter (val list:List<Post>, val context: Context)

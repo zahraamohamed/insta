@@ -1,14 +1,10 @@
 package com.example.nested_recyclerview.ui
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.view.LayoutInflater
-import android.widget.BaseAdapter
-import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.nested_recyclerview.R
 import com.example.nested_recyclerview.data.DataManager
 import com.example.nested_recyclerview.databinding.ActivityMainBinding
+import com.example.nested_recyclerview.ui.adapter.PostAdapter
 import com.example.nested_recyclerview.util.CsvParse
 import java.io.BufferedReader
 import java.io.InputStream

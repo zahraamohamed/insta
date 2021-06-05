@@ -1,12 +1,9 @@
-package com.example.nested_recyclerview.ui
+package com.example.nested_recyclerview.ui.adapter
 
 import android.content.Context
-import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.annotation.RequiresApi
-import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -16,7 +13,6 @@ import com.example.nested_recyclerview.data.DataManager
 import com.example.nested_recyclerview.data.Post
 import com.example.nested_recyclerview.databinding.HeaderBinding
 import com.example.nested_recyclerview.databinding.PostItemBinding
-import com.example.nested_recyclerview.databinding.StoryItemBinding
 
 class PostAdapter ( val list:List<Post>,val context: Context) : RecyclerView.Adapter<BaseViewHolder<*>> (){
 
@@ -80,9 +76,13 @@ class PostAdapter ( val list:List<Post>,val context: Context) : RecyclerView.Ada
 
 
     }
-        is ViewHolder->{
+        is ViewHolder ->{
+            val adapter= StoryAdapter(DataManager._postList ,context)
+            val layoutManger= LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
 
-// the bind data is set in story adapter
+            holder.binding.apply {
+                       subHeader.layoutManager=layoutManger
+                       subHeader.adapter=adapter}
     }
     }}
 
@@ -95,20 +95,13 @@ class PostAdapter ( val list:List<Post>,val context: Context) : RecyclerView.Ada
 
                 // classes holder
 
-    class PostViewHolder(val context: Context, ItemView: View):BaseViewHolder<View>(ItemView) {
+    class PostViewHolder(val context: Context, ItemView: View): BaseViewHolder<View>(ItemView) {
     val binding = PostItemBinding.bind(itemView)
 }
 
 
    class ViewHolder(val context: Context, itemView: View): BaseViewHolder<View>(itemView) {
         val  binding = HeaderBinding.bind(itemView)
-init {
-    val adapter=StoryAdapter(DataManager._postList ,context)
-    val layoutManger= LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
-    binding.subHeader.layoutManager=layoutManger
-   binding.subHeader.adapter=adapter
-
-}
 
 
  }
@@ -120,7 +113,7 @@ init {
 
 }
 
-
+abstract class BaseViewHolder<T>(itemView: View): RecyclerView.ViewHolder(itemView)
 
 
 
